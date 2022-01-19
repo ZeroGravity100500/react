@@ -1,0 +1,8 @@
+.CanvasComponent {
+    cursor: crosshair;
+    outline: 1px solid blue;
+}
+
+/*.CanvasComponent:focus {
+        outline: none
+}*/

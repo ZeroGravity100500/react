@@ -1,0 +1,9 @@
+.listClass {
+
+}
+
+.listItem {
+    background:linear-gradient('red', 'black');
+    color:white;
+    font-size:18px;
+}

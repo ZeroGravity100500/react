@@ -1,0 +1,28 @@
+.windowTitle {
+    padding: 2px 4px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgb(18, 185, 238) 0%, rgb(3, 91, 172) 100%);
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.windowClose {
+    position: relative;
+    border-radius: 5px;
+    height: 16px;
+    border: none;
+    outline: none;
+    transition-duration: 0.4s;
+    background-color: floralwhite;
+}
+
+.windowClose:hover {
+    background-color: darkgray;
+}

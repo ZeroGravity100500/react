@@ -1,0 +1,10 @@
+.dialogWindow {
+    position: absolute;
+    background-color: crimson;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.dialogWindowContent{
+    position: relative;
+}
