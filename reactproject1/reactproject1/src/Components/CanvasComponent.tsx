@@ -250,19 +250,19 @@ export class CanvasComponent extends React.Component<CanvasProperties> {
         //     transform: AffineTransform.createIdentityTransform()
         // });
 
-        // let formula = PresetShapesList.instance().getPreset('ellipseRibbon');
-        // if(formula) {
-        //     let list = formula.solveFor(new Rect2D(20, 20, 500, 500));
-        //     console.log(list);
-        //     list.forEach((path) => {
-        //         this._render?.addToRenderBuffer({
-        //             shape: path.path2D,
-        //             fill: false,
-        //             stroke: true,
-        //             transform: AffineTransform.createIdentityTransform()
-        //         });
-        //     });
-        // }
+        let formula = PresetShapesList.instance().getPreset('ellipseRibbon');
+        if(formula) {
+            let list = formula.solveFor(new Rect2D(20, 20, 500, 500));
+            console.log(list);
+            list.forEach((path) => {
+                this._render?.addToRenderBuffer({
+                    shape: path.path2D,
+                    fill: false,
+                    stroke: true,
+                    transform: AffineTransform.createIdentityTransform()
+                });
+            });
+        }
 
         // let reg = /[mMlLcCaAzZ]/gm;
         // let ret = reg.exec(CanvasComponent.LOGO_PATH);
@@ -298,13 +298,14 @@ export class CanvasComponent extends React.Component<CanvasProperties> {
             // this._render.drawPath(this.animQuad, true, false);
             // this.drawPoint(this.animLine.getAnimationValue(time), 5);
 
-            this._render.drawPath(this.animCubic, true, false);
+            // this._render.drawPath(this.animCubic, true, false);
 
             let point: IAnimatedValue = {
                 value: undefined
             };
-             this.anim1.getTransformation(Date.now(), point);
-             if (point.value)
+            
+            this.anim1.getTransformation(Date.now(), point);
+            if (point.value)
                  this._render.drawPoint(point.value, 5);
             //else {
             //    console.log('wrong');

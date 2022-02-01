@@ -216,7 +216,7 @@ export class Animation {
             if (this._cycleFlip) {
                 normalizedTime = 1 - normalizedTime;
             }
-            if (this._interpolator) {
+            if (this._interpolator !== undefined) {
                 const interpolatedTime = this._interpolator.getInterpolation(normalizedTime);
                 this.applyTransformation(interpolatedTime, outTransformation);
             }
